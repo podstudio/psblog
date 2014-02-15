@@ -44,6 +44,31 @@
         <div class="content pure-u-1 pure-u-med-3-4">
             <div>
               <h1><%= current_article.title unless current_article.nil? %></h1>
+
+              <% if current_article.present? && current_article.data.category.present? %>
+                <div class="related-articles">
+                  <p>This article is part of the <%= link_to current_article.data.category, category_path(current_article.data.category) %> Series.</p>
+
+                  <div class="nav-item">
+                    <% if previous_article_in_category.present? %>
+                      <% link_to previous_article_in_category, :class => "pure-button" do %>
+                        <i class="fa fa-chevron-left fa-lg"></i>
+                        <%= previous_article_in_category.title %>
+                      <% end %>
+                    <% end %>
+                  </div>
+
+                  <div class="nav-item right">
+                    <% if next_article_in_category.present? %>
+                      <% link_to next_article_in_category, :class => "pure-button" do %>
+                        <%= next_article_in_category.title %>
+                        <i class="fa fa-chevron-right fa-lg"></i>
+                      <% end %>
+                    <% end %>
+                  </div>
+                </div>
+              <% end %>
+
               <%= yield %>
                 <div class="footer">
                     <div class="pure-menu pure-menu-horizontal pure-menu-open">

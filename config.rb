@@ -23,6 +23,13 @@ activate :blog do |blog|
   blog.tag_template = "/blog/tag.html"
   blog.calendar_template = "/blog/calendar.html"
 
+  blog.custom_collections = {
+    category: {
+      link: '/categories/{category}.html',
+      template: '/blog/category.html'
+    }
+  }
+
   # Enable pagination
   # blog.paginate = true
   # blog.per_page = 10
