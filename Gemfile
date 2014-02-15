@@ -8,3 +8,4 @@ gem "middleman-blog", "~> 3.5.1"
 # For feed.xml.builder
 gem "builder", "~> 3.0"
 gem "middleman-syntax"
+gem "nokogiri"
