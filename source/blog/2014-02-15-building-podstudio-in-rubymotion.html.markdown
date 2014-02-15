@@ -4,6 +4,11 @@ date: 2014-02-15 17:43 UTC
 tags: Rubymotion
 ---
 
+~~~ ruby
+def my_cool_method(message)
+  puts message
+end
+~~~
 
 Over the past few months, I have found myself wanting more and more out of the iPhone apps that I use to listen to podcasts on a daily basis. Either the UI itself was almost completely unintuitive, my subscriptions would not update reliably, or some edge feature was not going to be available for quite some time. It was at this time that I bought a license for [RubyMotion](http://www.rubymotion) and decided to dive in head-first to see if I could create my own podcast management app. 
 

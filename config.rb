@@ -71,6 +71,7 @@ page "/feed.xml", layout: false
 # Reload the browser automatically whenever files change
 activate :livereload
 activate :directory_indexes
+activate :syntax
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -84,6 +85,8 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+set :markdown_engine, :kramdown
 
 # Build-specific configuration
 configure :build do
