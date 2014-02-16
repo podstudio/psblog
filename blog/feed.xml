@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
+
+    <title>The Middleman</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.1/pure.css">
+
+    <link rel="stylesheet" href="/stylesheets/fontawesome/font-awesome.css">
+    <link rel="stylesheet" href="/stylesheets/fonts.css">
+    <link rel="stylesheet" href="/stylesheets/main-grid.css">
+    <link rel="stylesheet" href="/stylesheets/blog.css">
+    <link rel="stylesheet" href="/stylesheets/github-syntax.css">
+
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+  <body class="blog blog_feed">
+    <div id="layout" class="pure-g">
+        <div class="sidebar pure-u-1 pure-u-med-1-4">
+            <div class="header">
+                <hgroup>
+                    <h1 class="brand-title">podstud<span>.io</span></h1>
+                    <h2 class="brand-tagline">Nader Hendawi</h2>
+                </hgroup>
+
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a class="pure-button" href="/"><i class="fa fa-home fa-lg"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="pure-button" hreg="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="pure-button" href="/blog">Blog</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="content pure-u-1 pure-u-med-3-4">
+            <div>
+              <h1></h1>
+
+              
+
+              <?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog Name</title>
+  <subtitle>Blog subtitle</subtitle>
+  <id>http://blog.url.com/blog</id>
+  <link href="http://blog.url.com/blog"/>
+  <link href="http://blog.url.com/blog/feed.xml" rel="self"/>
+  <updated>2014-02-15T21:10:00Z</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>Building podstud.io in Rubymotion - Setup</title>
+    <link rel="alternate" href="http://blog.url.com/blog/building-podstudio-in-rubymotion-setup/"/>
+    <id>http://blog.url.com/blog/building-podstudio-in-rubymotion-setup/</id>
+    <published>2014-02-15T21:10:00Z</published>
+    <updated>2014-02-15T17:45:12-05:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Remember to add something here…&lt;/p&gt;
+
+&lt;h3 id="setup--the-player-controller"&gt;Setup &amp;amp; The Player Controller&lt;/h3&gt;
+
+&lt;p&gt;First, we need to create our new RubyMotion project. I'm a huge fan of the RubyMotionQuery library written by Todd Werth at http://infinitered.com/rmq/, so I am going to use that to get things moving in the right direction. It might(read: would definitely) be useful to check out the project and GitHub and see what @twerth has to say about rmq himself.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rmq create podstudio-rm&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;If we run &lt;code&gt;rake&lt;/code&gt; now, we can see that our app is already up and running!&lt;/p&gt;
+
+&lt;p&gt;{&amp;lt;2&amp;gt;}&lt;img alt="" src="/content/images/2014/Feb/iOS_Simulator_Screen_shot_Feb_10__2014_12_28_27_PM.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, we need to create a controller to display the Podcast Episode Player View. I'll call it the PlayerController and create it by using RMQ's controller creation API:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rmq create controller player&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Let's see what that did. The output of this command is as follows:&lt;/p&gt;
+
+&lt;pre class="highlight ruby"&gt;  &lt;span class="no"&gt;Creating&lt;/span&gt; &lt;span class="ss"&gt;controller: &lt;/span&gt;&lt;span class="n"&gt;player&lt;/span&gt;
+
+     &lt;span class="no"&gt;Using&lt;/span&gt; &lt;span class="n"&gt;existing&lt;/span&gt; &lt;span class="ss"&gt;directory: &lt;/span&gt;&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;controllers&lt;/span&gt;
+  &lt;span class="err"&gt;Δ&lt;/span&gt;  &lt;span class="no"&gt;Creating&lt;/span&gt; &lt;span class="ss"&gt;file: &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="no"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nader&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="no"&gt;Dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;podstudio&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;podstudio&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;rm&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;controllers&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;player_controller&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;rb&lt;/span&gt;
+     &lt;span class="no"&gt;Using&lt;/span&gt; &lt;span class="n"&gt;existing&lt;/span&gt; &lt;span class="ss"&gt;directory: &lt;/span&gt;&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;stylesheets&lt;/span&gt;
+  &lt;span class="err"&gt;Δ&lt;/span&gt;  &lt;span class="no"&gt;Creating&lt;/span&gt; &lt;span class="ss"&gt;file: &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="no"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nader&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="no"&gt;Dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;podstudio&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;podstudio&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;rm&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;stylesheets&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;player_controller_stylesheet&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;rb&lt;/span&gt;
+     &lt;span class="no"&gt;Using&lt;/span&gt; &lt;span class="n"&gt;existing&lt;/span&gt; &lt;span class="ss"&gt;directory: &lt;/span&gt;&lt;span class="n"&gt;spec&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;controllers&lt;/span&gt;
+  &lt;span class="err"&gt;Δ&lt;/span&gt;  &lt;span class="no"&gt;Creating&lt;/span&gt; &lt;span class="ss"&gt;file: &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="no"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nader&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="no"&gt;Dev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;podstudio&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;podstudio&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;rm&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;spec&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;controllers&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;player_controller&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;rb&lt;/span&gt;
+
+     &lt;span class="no"&gt;Done&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;So, the command created a controller, a stylesheet and a test file for the PlayerController. Now, to load the new PlayerController when the app is launched.&lt;/p&gt;
+
+&lt;p&gt;In &lt;code&gt;app/app_delegate.rb&lt;/code&gt;, change the following lines:&lt;/p&gt;
+
+&lt;pre class="highlight ruby"&gt;  &lt;span class="n"&gt;main_controller&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;MainController&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;alloc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;initWithNibName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kp"&gt;nil&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;bundle: &lt;/span&gt;&lt;span class="kp"&gt;nil&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="vi"&gt;@window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;rootViewController&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;UINavigationController&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;alloc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;initWithRootViewController&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;main_controller&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;to&lt;/p&gt;
+
+&lt;pre class="highlight ruby"&gt;  &lt;span class="n"&gt;player_controller&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;PlayerController&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;new&lt;/span&gt;
+  &lt;span class="vi"&gt;@window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;rootViewController&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;UINavigationController&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;alloc&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;initWithRootViewController&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;player_controller&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Then, add a title to the PlayerController so we can be sure we're in the right place.&lt;/p&gt;
+
+&lt;p&gt;In the viewDidLoad method of player_controller.rb, add the following:&lt;/p&gt;
+
+&lt;pre class="highlight ruby"&gt;&lt;span class="nb"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Player"&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Now, if we run &lt;code&gt;rake&lt;/code&gt; we'll see that we are sent to the Player Controller this time.&lt;/p&gt;
+
+&lt;p&gt;{&amp;lt;3&amp;gt;}&lt;img alt="" src="/content/images/2014/Feb/iOS_Simulator_Screen_shot_Feb_10__2014_12_40_11_PM.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, we don't want our cool new podcasting app to look like every other iOS7 app out there, so let's try and add some basic styling to differentiate ourselves and make the app even more exciting.&lt;/p&gt;
+
+&lt;h3 id="enter-pixate"&gt;Enter Pixate&lt;/h3&gt;
+&lt;p&gt;According to &lt;a href="http://www.pixate.com/"&gt;their site&lt;/a&gt;, Pixate is a free framework that lets you style your native iOS views with stylesheets. That means we get to use CSS (and even SASS) to style our UI components! If you haven't made the switch over to SASS from Vanilla CSS, please do yourself (and everyone who reads your code) a favor and at least &lt;a href="http://sass-lang.com/"&gt;give it a look&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pixate has recently released its own CSS Framework that allows us to create a great looking app without writing everything from scratch. If you're familiar with Twitter Bootstrap, you'll immediately understand the advantages of using &lt;a href="http://www.pixate.com/freestyle/"&gt;Freestyle&lt;/a&gt;. So, let's start incorporating Pixate into our project.&lt;/p&gt;
+
+&lt;h4 id="installing-pixate"&gt;Installing Pixate&lt;/h4&gt;
+
+&lt;p&gt;I'm going to use a gem called RubyMotion-Pixate to help us get off the ground here. The documentation for setup is fairly straightforward, so I won't duplicate efforts. Please refer to the setup step on &lt;a href="https://github.com/Pixate/RubyMotion-Pixate"&gt;Github&lt;/a&gt;. If you followed those steps correctly you should be good to go, but I like to use SASS rather than Vanilla CSS so there are a couple more steps. Make sure you have added &lt;code&gt;gem 'motion-pixate'&lt;/code&gt; to your Gemfile and continue on.&lt;/p&gt;
+
+&lt;p&gt;First, we have to create a &lt;code&gt;sass&lt;/code&gt; folder under our main project directory and copy in the .scss files from the Pixate Freestyle Download.&lt;/p&gt;
+
+&lt;p&gt;My directory structure now looks like this:&lt;/p&gt;
+
+&lt;p&gt;{&amp;lt;4&amp;gt;}&lt;img alt="" src="/content/images/2014/Feb/Screen_Shot_2014_02_10_at_1_08_26_PM.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Feel free to poke around these SASS files and see how simple it is to customize our UI now!&lt;/p&gt;
+
+&lt;h4 id="pixate-sass-build-task"&gt;Pixate SASS Build Task&lt;/h4&gt;
+&lt;p&gt;One thing that is important to note is that our SASS is only compiled when we manually run &lt;code&gt;rake pixate:sass&lt;/code&gt;. That's quite annoying to do repeatedly during the development process, so I like to add the following lines to my Rakefile:&lt;/p&gt;
+
+&lt;pre class="highlight ruby"&gt;  &lt;span class="n"&gt;task&lt;/span&gt; &lt;span class="ss"&gt;:"build:simulator"&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:"pixate:sass"&lt;/span&gt;
+  &lt;span class="n"&gt;task&lt;/span&gt; &lt;span class="ss"&gt;:"build:device"&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="ss"&gt;:"pixate:sass"&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Now, whenever we build to the simulator or our device, our CSS file will automatically be generated for us by Pixate. &lt;/p&gt;
+
+&lt;p&gt;Lets take a look at what happens when we run &lt;code&gt;rake&lt;/code&gt; now.&lt;/p&gt;
+
+&lt;p&gt;{&amp;lt;5&amp;gt;}&lt;img alt="" src="/content/images/2014/Feb/iOS_Simulator_Screen_shot_Feb_10__2014_1_11_34_PM.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Simple, but already starting to look much nicer than our default UI.&lt;/p&gt;
+
+&lt;h3 id="next-steps"&gt;Next Steps&lt;/h3&gt;
+
+&lt;p&gt;Now that we are all set up, we can start developing the UI for our Podcast Player and exploring the powerful functionality we can introduce over time using RubyMotion. It should be mentioned that I follow the preceding steps for almost every new project I start in RubyMotion. Feel free to check out the project on &lt;a href="https://github.com/podstudio/podstudio-rm/tree/setup"&gt;GitHub&lt;/a&gt; and run it yourself. &lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Building podstud.io in RubyMotion</title>
+    <link rel="alternate" href="http://blog.url.com/blog/building-podstudio-in-rubymotion/"/>
+    <id>http://blog.url.com/blog/building-podstudio-in-rubymotion/</id>
+    <published>2014-02-15T17:43:00Z</published>
+    <updated>2014-02-15T17:46:13-05:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Over the past few months, I have found myself wanting more and more out of the iPhone apps that I use to listen to podcasts on a daily basis. Either the UI itself was a little too confusing, my subscriptions would not update reliably, or some edge feature was not going to be available for quite some time. It was at this time that I was also tasked with creating a native iOS app during a Hackathon at &lt;a href="http://www.backupify.com"&gt;Backupify&lt;/a&gt;. I spend most of my day in the world of Ruby on Rails..so I thought it would be nice to be able to bring some of my ruby knowledge with me on my journey in iOS development. So, I bought a license for &lt;a href="http://www.rubymotion"&gt;RubyMotion&lt;/a&gt; and decided to dive in head-first to see if I could create my own podcast management app. &lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="" src="/blog/building-podstudio-in-rubymotion/logotype-icon.png" /&gt;&lt;/p&gt;
+
+&lt;p&gt;The community and ecosystem behind RubyMotion is truly amazing. Everyone I have encountered has been incredibly passionate about what they do and helpful whenever possible. But, I noticed there aren't a ton of places to look for examples of large, sufficiently complex applications. So, I have decided to use this blog as a vehicle to build the podstud.io app from scratch, and hopefully provide a glimpse into the evolution of an app from start to finish.&lt;/p&gt;
+
+&lt;p&gt;I have a vague idea of the direction I want this series (and the app itself) to take, but that is subject to change based on any new concepts or ideas I happen to run into along the way. Oh…and I should mention that all the code from this series and the app itself will be open-source and available on GitHub so that you can follow along at your own pace.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="/blog/building-podstudio-in-rubymotion-setup"&gt;Part 0: Setup&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://podstud.io/building-podstudio-in-rubymotion-part-1/"&gt;Part 1: Streaming Remote Audio&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://podstud.io/building-podstudio-in-rubymotion-part-2/"&gt;Part 2: Background Audio Session&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://podstud.io/bonus-building-podstudio-in-rubymotion-tests/"&gt;Tests&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://podstud.io/building-podstudio-in-rubymotion-part-3/"&gt;Part 3: Player UI&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Part 4: Media Info Center&lt;/li&gt;
+  &lt;li&gt;Part 5: Integrating Reveal.app&lt;/li&gt;
+  &lt;li&gt;Part 6: iTunes Search API&lt;/li&gt;
+  &lt;li&gt;Part 7: Subscriptions + CDQ&lt;/li&gt;
+  &lt;li&gt;Part 8: Now Playing View&lt;/li&gt;
+  &lt;li&gt;Part 9: Subscriptions Collection View&lt;/li&gt;
+  &lt;li&gt;Part 10: Podcast List View&lt;/li&gt;
+  &lt;li&gt;Part 11: TBD&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+</feed>
+
+                <div class="footer">
+                    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                        <ul>
+                            <li><a href="http://purecss.io/">About</a></li>
+                            <li><a href="http://twitter.com/yuilibrary/">Twitter</a></li>
+                            <li><a href="http://github.com/yui/pure/">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://yui.yahooapis.com/3.14.1/build/yui/yui.js"></script>
+    <script>
+    YUI().use('node-base', 'node-event-delegate', function (Y) {
+        // This just makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        Y.one('body').delegate('click', function (e) {
+            e.preventDefault();
+        }, 'a[href="#"]');
+    });
+    </script>
+</body>
+</html>

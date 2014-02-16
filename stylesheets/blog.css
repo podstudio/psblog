@@ -1,0 +1,216 @@
+/* line 1, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 8, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+html, button, input, select, textarea,
+.pure-g [class*="pure-u"] {
+  font-family: "proxima_novalight", sans-serif;
+  color: #444;
+  line-height: 1.8em; }
+
+/* line 14, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'quicksandlight', sans-serif; }
+
+/* line 18, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+a {
+  text-decoration: none;
+  color: #3d92c9; }
+
+/* line 23, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+a:hover,
+a:focus {
+  text-decoration: underline; }
+
+/* line 27, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+h3 {
+  font-weight: 100; }
+
+/* LAYOUT CSS */
+/* line 32, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.pure-img-responsive {
+  max-width: 100%;
+  height: auto; }
+
+/* line 37, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+#layout {
+  padding: 0; }
+
+/* line 41, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.header {
+  text-align: center;
+  top: auto;
+  margin: 3em auto; }
+
+/* line 47, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.sidebar {
+  background: #333;
+  color: #fff; }
+
+/* line 53, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.brand-title,
+.brand-tagline {
+  margin: 0; }
+
+/* line 56, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.brand-title {
+  color: #fff;
+  text-transform: uppercase; }
+  /* line 59, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+  .brand-title span {
+    color: #b0cadb; }
+
+/* line 61, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.brand-tagline {
+  font-weight: 300;
+  color: #b0cadb; }
+
+/* line 66, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/* line 71, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.nav-item {
+  display: inline-block;
+  *display: inline;
+  zoom: 1; }
+
+/* line 76, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.nav-item a {
+  background: transparent !important;
+  border: 2px solid #b0cadb;
+  color: #fff;
+  margin-top: 1em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 85%; }
+
+/* line 86, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.nav-item a:hover,
+.nav-item a:focus {
+  border: 2px solid #3d92c9;
+  text-decoration: none; }
+
+/* line 91, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.content-subhead {
+  text-transform: uppercase;
+  color: #aaa;
+  border-bottom: 1px solid #eee;
+  padding: 0.4em 0;
+  font-size: 80%;
+  font-weight: 500;
+  letter-spacing: 0.1em; }
+
+/* line 101, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.content {
+  padding: 2em 1em 0; }
+
+/* line 105, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.post {
+  padding-bottom: 2em; }
+
+/* line 108, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.post-title {
+  font-size: 2em;
+  color: #222;
+  margin-bottom: 0.2em;
+  line-height: 1.2em; }
+
+/* line 114, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.post-avatar {
+  border-radius: 50px;
+  float: right;
+  margin-left: 1em; }
+
+/* line 120, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.post-description {
+  color: #444;
+  line-height: 1.8em; }
+
+/* line 124, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.post-meta {
+  color: #999;
+  font-size: 90%;
+  margin: 0; }
+
+/* line 130, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.post-category {
+  margin: 0 0.1em;
+  padding: 0.3em 1em;
+  color: #fff;
+  background: #999;
+  font-size: 80%; }
+
+/* line 137, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.post-category-design {
+  background: #5aba59; }
+
+/* line 140, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.post-category-pure {
+  background: #4d85d1; }
+
+/* line 143, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.post-category-yui {
+  background: #8156a7; }
+
+/* line 146, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.post-category-js {
+  background: #df2d4f; }
+
+/* line 150, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.post-images {
+  margin: 1em 0; }
+
+/* line 153, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.post-image-meta {
+  margin-top: -3.5em;
+  margin-left: 1em;
+  color: #fff;
+  text-shadow: 0 1px 1px #333; }
+
+/* line 160, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.footer {
+  text-align: center;
+  padding: 1em 0; }
+
+/* line 164, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.footer a {
+  color: #ccc;
+  font-size: 80%; }
+
+/* line 169, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.footer .pure-menu a:hover,
+.footer .pure-menu a:focus {
+  background: none; }
+
+/* line 173, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+.related-articles {
+  overflow: auto; }
+  /* line 176, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+  .related-articles .nav-item.right {
+    float: right; }
+  /* line 177, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+  .related-articles .nav-item a {
+    color: #444; }
+
+@media (min-width: 48em) {
+  /* line 182, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+  .content {
+    padding: 2em 3em 0;
+    margin-left: 25%; }
+
+  /* line 187, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+  .header {
+    margin: 80% 2em 0;
+    text-align: right; }
+
+  /* line 192, /Users/nader/Dev/podstudio/psblog/source/stylesheets/blog.css.scss */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0; } }

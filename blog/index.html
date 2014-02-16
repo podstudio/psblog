@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
+
+    <title>The Middleman</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.1/pure.css">
+
+    <link rel="stylesheet" href="/stylesheets/fontawesome/font-awesome.css">
+    <link rel="stylesheet" href="/stylesheets/fonts.css">
+    <link rel="stylesheet" href="/stylesheets/main-grid.css">
+    <link rel="stylesheet" href="/stylesheets/blog.css">
+    <link rel="stylesheet" href="/stylesheets/github-syntax.css">
+
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+  <body class="blog blog_index">
+    <div id="layout" class="pure-g">
+        <div class="sidebar pure-u-1 pure-u-med-1-4">
+            <div class="header">
+                <hgroup>
+                    <h1 class="brand-title">podstud<span>.io</span></h1>
+                    <h2 class="brand-tagline">Nader Hendawi</h2>
+                </hgroup>
+
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a class="pure-button" href="/"><i class="fa fa-home fa-lg"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="pure-button" hreg="/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="pure-button" href="/blog">Blog</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="content pure-u-1 pure-u-med-3-4">
+            <div>
+              <h1></h1>
+
+              
+
+              
+
+<div class="posts">
+  <h1 class="content-subhead">Recent Posts</h1>
+
+  
+    <section class="post">
+      <header class="post-header">
+          <img class="post-avatar" alt="Nader Hendawi&#x27;s avatar" height="48" width="48" src="img/common/ericf-avatar.png">
+
+          <h2 class="post-title"><a href="/blog/building-podstudio-in-rubymotion-setup/">Building podstud.io in Rubymotion - Setup</a></h2>
+
+          <p class="post-meta">
+              By <a class="post-author" href="#">Nader Hendawi</a> under 
+              
+                <a class="post-category post-category-RubyMotion" href="#">RubyMotion</a>
+              
+          </p>
+      </header>
+
+      <div class="post-description">
+        <p>Remember to add something here…</p>
+
+<h3 id="setup--the-player-controller">Setup &amp; The Player Controller</h3>
+
+<p>First, we need to create our new RubyMotion project. I'm a huge fan of the RubyMotionQuery library written by Todd Werth at http://infinitered.com/rmq/, so I am going to use that to get...</p>
+      </div>
+    </section>
+  
+    <section class="post">
+      <header class="post-header">
+          <img class="post-avatar" alt="Nader Hendawi&#x27;s avatar" height="48" width="48" src="img/common/ericf-avatar.png">
+
+          <h2 class="post-title"><a href="/blog/building-podstudio-in-rubymotion/">Building podstud.io in RubyMotion</a></h2>
+
+          <p class="post-meta">
+              By <a class="post-author" href="#">Nader Hendawi</a> under 
+              
+                <a class="post-category post-category-Rubymotion" href="#">Rubymotion</a>
+              
+          </p>
+      </header>
+
+      <div class="post-description">
+        <p>Over the past few months, I have found myself wanting more and more out of the iPhone apps that I use to listen to podcasts on a daily basis. Either the UI itself was a little too confusing, my subscriptions would not update reliably, or some edge...</p>
+      </div>
+    </section>
+  
+</div>
+
+
+                <div class="footer">
+                    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                        <ul>
+                            <li><a href="http://purecss.io/">About</a></li>
+                            <li><a href="http://twitter.com/yuilibrary/">Twitter</a></li>
+                            <li><a href="http://github.com/yui/pure/">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://yui.yahooapis.com/3.14.1/build/yui/yui.js"></script>
+    <script>
+    YUI().use('node-base', 'node-event-delegate', function (Y) {
+        // This just makes sure that the href="#" attached to the <a> elements
+        // don't scroll you back up the page.
+        Y.one('body').delegate('click', function (e) {
+            e.preventDefault();
+        }, 'a[href="#"]');
+    });
+    </script>
+</body>
+</html>
