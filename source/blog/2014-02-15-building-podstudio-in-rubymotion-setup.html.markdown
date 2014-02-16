@@ -1,7 +1,7 @@
 ---
 title: Building podstud.io in Rubymotion - Setup
 date: 2014-02-15 21:10 UTC
-tags:
+tags: RubyMotion
 category: RubyMotion
 ---
 
