@@ -147,3 +147,69 @@ I'm not a huge fan of the way that text looks. Luckily Pixate Freestyle comes wi
 That's definitely a little cleaner. Moving on...
 
 ### Playback View
+
+We're going to follow more or less the same approach as above to get everything in place, with one caveat. It's possible to simply create the necessary elements and place them in our view within our existing Motion::Layout block, however this will quickly get very cumbersome (I'll leave that as an exercise for the reader if you don't believe me!). So, we're going to take advantage of Motion::Layout's powerful ability to nest layouts within each other. First, we'll create a UIView which will house our playback components:
+
+~~~~ ruby
+  @playback_view = rmq.append(UIView, :playback_view).get
+~~~~ 
+
+We can place this view within our current layout since that's easy enough for now:
+
+~~~~ ruby
+  Motion::Layout.new do |layout|
+    layout.view self.view
+    layout.subviews "thumbnail" => @thumbnail, "podcast_title" => @podcast_title,
+                    "episode_title" => @episode_title, "playback_view" => @playback_view
+    layout.metrics "zero" => 0, "thumbnail_height" => 300
+    layout.vertical     "|-zero-[thumbnail(thumbnail_height)]-[podcast_title]-[episode_title]-[playback_view]-(>=zero)-|"
+    layout.horizontal   "|-zero-[thumbnail]-zero-|"
+    layout.horizontal   "|-[podcast_title]-|"
+    layout.horizontal   "|-[episode_title]-|"
+    layout.horizontal   "|-[playback_view]-|"
+  end
+~~~~
+
+Now, we would like to create the components that will live within the playback view. Those being the play/stop button, the start_time and end_time of the audio and the progress slider.
+
+~~~~ ruby
+  @playback_view = rmq.append(UIView, :playback_view).get
+
+  @play_stop = rmq(@playback_view).append(UIButton, :play_stop).get
+  @play_stop.setTitle("Play", forState: UIControlStateNormal)
+  @play_stop.styleClass = "button"
+
+  @start_time = rmq(@playback_view).append(UILabel, :start_time).get
+  @start_time.text = "00:00"
+
+  @end_time = rmq(@playback_view).append(UILabel, :end_time).get
+  @end_time.text = "12:34"
+  
+  @slider = rmq(@playback_view).append(UISlider, :slider).get
+~~~~
+
+Notice that instead of simply calling `rmq.append`, we are appending the new views *to* our playback_view. This is very similar to the way things are done in jQuery by design. Now that we have the playback_view in position, we need to move its children into place within the context of the playback_view itself. Luckily, this is very easy to do by simply using another Motion::Layout block! Below our current layout block, add the following:
+
+~~~~ ruby
+  Motion::Layout.new do |layout|
+    layout.view @playback_view
+    layout.subviews "play_stop" => @play_stop, "start_time" => @start_time,
+                    "end_time" => @end_time, "slider" => @slider
+    layout.metrics "zero" => 0, "top" => 50, "button_size" => 100, "button_size_with_margin" => 115, "text_width" => 50
+    layout.vertical  "|-[play_stop]-|"
+    layout.vertical  "|-[slider]-(>=zero)-|"
+    layout.vertical  "|-top-[start_time]-(>=zero)-|"
+    layout.vertical  "|-top-[end_time]-(>=zero)-|"
+    layout.horizontal "|-zero-[play_stop(==button_size)]-(>=zero)-|"
+    layout.horizontal "|-button_size_with_margin-[slider]-(<=zero)-|"
+    layout.horizontal "|-button_size_with_margin-[start_time(==text_width)]-[end_time(==text_width)]-(>=zero)-|"
+  end
+~~~~
+
+This is a little more intricate than the other layouts we've created but it gets easier with a thoughtful set of metrics and constraints. Imagine having all of this code in our original code block! There are even more ways to simplify this layout. We could extract the start and end time labels into their own layout and nest it within this playback_view layout. we could isolate the slider + time views and simply place them adjacent to the play/stop button. All of these options would make our code much more readable and easy to deal with. I will implement those optimizations in the branch, which you can check out on [GitHub](http://www.github.com/podstudio/podstudio-rm). But for now, let's check out what we have:
+
+![](/blog/2014-02-17-building-podstudio-in-rubymotion-part-3/8.png)
+
+We're looking pretty good so far! I actually kind of like the way that button looks compared to the one in the mockup, so I'm going to leave that for now. 
+
+*Important Note:* I haven't delineated the tests for this article, but I can't stress enough how important it is to write tests as you go. Once our UI gets more and more complicated, we're going to rely on those tests to tell us if anything breaks, and more importantly when everything is running as we expect it to. They can all be found in the `/specs` folder on Github.
