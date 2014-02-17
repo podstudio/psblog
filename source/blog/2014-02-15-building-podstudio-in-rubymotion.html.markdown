@@ -14,15 +14,16 @@ The community and ecosystem behind RubyMotion is truly amazing. Everyone I have 
 I have a vague idea of the direction I want this series (and the app itself) to take, but that is subject to change based on any new concepts or ideas I happen to run into along the way. Oh...and I should mention that all the code from this series and the app itself will be open-source and available on GitHub so that you can follow along at your own pace.
 
 * [Part 0: Setup](/blog/building-podstudio-in-rubymotion-setup)
-* [Part 1: Streaming Remote Audio](http://podstud.io/building-podstudio-in-rubymotion-part-1/)
-* [Part 2: Background Audio Session](http://podstud.io/building-podstudio-in-rubymotion-part-2/)
-* [Tests](http://podstud.io/bonus-building-podstudio-in-rubymotion-tests/)
-* [Part 3: Player UI](http://podstud.io/building-podstudio-in-rubymotion-part-3/)
-* Part 4: Media Info Center
-* Part 5: Integrating Reveal.app
-* Part 6: iTunes Search API
-* Part 7: Subscriptions + CDQ
-* Part 8: Now Playing View
-* Part 9: Subscriptions Collection View
-* Part 10: Podcast List View
-* Part 11: TBD
+* [Part 1: Streaming Remote Audio](/blog/building-podstudio-in-rubymotion-part-1)
+* [Part 2: Background Audio Session](/blog/building-podstudio-in-rubymotion-part-2)
+* [Tests](/blog/building-podstudio-in-rubymotion-tests)
+* [Part 3: Player UI](/blog/building-podstudio-in-rubymotion-part-3)
+* [Part 4: Audio Seeking / UI](/blog/building-podstudio-in-rubymotion-part-4)
+* Part 5: Media Info Center / Remote Control Events
+* Part 6: Integrating Reveal.app
+* Part 7: iTunes Search API
+* Part 8: Subscriptions + CDQ
+* Part 9: Now Playing View
+* Part 10: Subscriptions Collection View
+* Part 11: Podcast List View
+* Part 12: TBD
