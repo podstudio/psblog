@@ -16,7 +16,7 @@ First, we need to create our new RubyMotion project. I'm a huge fan of the RubyM
     
 If we run `rake` now, we can see that our app is already up and running!
 
-{<2>}![](/content/images/2014/Feb/iOS_Simulator_Screen_shot_Feb_10__2014_12_28_27_PM.png)
+![](/blog/building-podstudio-in-rubymotion-setup/1.png)
 
 Now, we need to create a controller to display the Podcast Episode Player View. I'll call it the PlayerController and create it by using RMQ's controller creation API:
   
@@ -62,8 +62,7 @@ self.title = "Player"
 
 Now, if we run `rake` we'll see that we are sent to the Player Controller this time.
 
-{<3>}![](/content/images/2014/Feb/iOS_Simulator_Screen_shot_Feb_10__2014_12_40_11_PM.png)
-
+![](/blog/building-podstudio-in-rubymotion-setup/2.png)
 
 Now, we don't want our cool new podcasting app to look like every other iOS7 app out there, so let's try and add some basic styling to differentiate ourselves and make the app even more exciting.
 
@@ -80,7 +79,7 @@ First, we have to create a `sass` folder under our main project directory and co
 
 My directory structure now looks like this:
 
-{<4>}![](/content/images/2014/Feb/Screen_Shot_2014_02_10_at_1_08_26_PM.png)
+![](/blog/building-podstudio-in-rubymotion-setup/3.png)
 
 Feel free to poke around these SASS files and see how simple it is to customize our UI now!
 
@@ -96,7 +95,7 @@ Now, whenever we build to the simulator or our device, our CSS file will automat
 
 Lets take a look at what happens when we run `rake` now.
 
-{<5>}![](/content/images/2014/Feb/iOS_Simulator_Screen_shot_Feb_10__2014_1_11_34_PM.png)
+![](/blog/building-podstudio-in-rubymotion-setup/4.png)
 
 Simple, but already starting to look much nicer than our default UI.
 
