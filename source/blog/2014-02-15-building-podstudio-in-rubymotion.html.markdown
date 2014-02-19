@@ -19,7 +19,7 @@ I have a vague idea of the direction I want this series (and the app itself) to 
 * [Tests](/blog/building-podstudio-in-rubymotion-tests)
 * [Part 3: Player UI](/blog/building-podstudio-in-rubymotion-part-3)
 * [Part 4: Audio Seeking / UI](/blog/building-podstudio-in-rubymotion-part-4)
-* Part 5: Media Info Center / Remote Control Events
+* [Part 5: Media Info Center / Remote Control Events](/blog/building-podstudio-in-rubymotion-part-5)
 * Part 6: Integrating Reveal.app
 * Part 7: iTunes Search API
 * Part 8: Subscriptions + CDQ
