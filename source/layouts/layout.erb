@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
+    <meta name="description" content="An Open Source Podcast Player built with RubyMotion and an exploration into AngularJS">
 
-    <title><%= current_page.data.title || "The Middleman" %></title>
+    <title><%= current_page.data.title || "podstud.io - Nader Hendawi" %></title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.1/pure.css">
 
     <link rel="stylesheet" href="/stylesheets/fontawesome/font-awesome.css">
@@ -31,7 +31,7 @@
                             <a class="pure-button" href="/"><i class="fa fa-home fa-lg"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="pure-button" hreg="/about">About</a>
+                            <a class="pure-button" hreg="/">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="pure-button" href="/blog">Blog</a>
@@ -47,7 +47,7 @@
 
               <% if current_article.present? && current_article.data.category.present? %>
                 <div class="related-articles">
-                  <p>This article is part of the <%= link_to current_article.data.category, category_path(current_article.data.category) %> Series.</p>
+                  <p>This article is part of the <a href="/<%= current_article.data.category.downcase %>"><%= current_article.data.category %></a> Series.</p>
 
                   <div class="nav-item">
                     <% if previous_article_in_category.present? %>
@@ -73,9 +73,9 @@
                 <div class="footer">
                     <div class="pure-menu pure-menu-horizontal pure-menu-open">
                         <ul>
-                            <li><a href="http://purecss.io/">About</a></li>
-                            <li><a href="http://twitter.com/yuilibrary/">Twitter</a></li>
-                            <li><a href="http://github.com/yui/pure/">GitHub</a></li>
+                            <li><a href="/" target="_blank">About</a></li>
+                            <li><a href="https://twitter.com/podstudioapp" target="_blank">Twitter</a></li>
+                            <li><a href="http://github.com/podstudio" target="_blank">GitHub</a></li>
                         </ul>
                     </div>
                 </div>

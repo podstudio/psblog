@@ -4,6 +4,7 @@ date: 2014-02-15 17:43 UTC
 tags: Rubymotion
 category: RubyMotion
 ---
+# Building podstud.io in RubyMotion
 
 Over the past few months, I have found myself wanting more and more out of the iPhone apps that I use to listen to podcasts on a daily basis. Either the UI itself was a little too confusing, my subscriptions would not update reliably, or some edge feature was not going to be available for quite some time. It was at this time that I was also tasked with creating a native iOS app during a Hackathon at [Backupify](http://www.backupify.com). I spend most of my day in the world of Ruby on Rails..so I thought it would be nice to be able to bring some of my ruby knowledge with me on my journey in iOS development. So, I bought a license for [RubyMotion](http://www.rubymotion) and decided to dive in head-first to see if I could create my own podcast management app. 
 
