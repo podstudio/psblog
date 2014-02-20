@@ -101,7 +101,11 @@ h3 {
 
 .content {
     padding: 2em 1em 0;
-    p img { border: 1px solid #ccc; }
+    p img {
+        display: block;
+        margin: 5px auto;
+        border: 1px solid #ccc;
+    }
 }
 
 .post {
@@ -152,6 +156,7 @@ h3 {
 .post-images {
     margin: 1em 0;
 }
+
 .post-image-meta {
     margin-top: -3.5em;
     margin-left: 1em;
@@ -178,6 +183,15 @@ h3 {
         &.right { float: right; }
         a { color: #444; }
     }
+}
+
+code, kbd, pre, samp {
+    font-size: 12px;
+}
+
+.series-banner img {
+    max-width: 600px;
+    width: 100%;
 }
 
 @media (min-width: 48em) {
