@@ -13,7 +13,7 @@ I want this site to be a living account of my development efforts across a varie
 [![](/images/angular-banner@2x.jpg)](/angular)
 {: .series-banner}
 
-> 
+> [**Adventures in Angular**](/angular) This series will follow a less structured approach than my others and is not necessarily focused on the construction of the **podstud.io** app. Instead, I will be discussing my recent work and discoveries in the world of AngularJS. Topics like testing, advanced directive techniques and various data modeling approaches are all examples of topics I will be covering. 
 
 
 ## In Development
