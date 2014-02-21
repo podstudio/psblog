@@ -10,7 +10,7 @@ I want this site to be a living account of my development efforts across a varie
 > [**Building podstud.io in RubyMotion:**](/rubymotion) Currently this is the primary focus of this site. I will be building the **podstud.io** app from scratch and providing a step-by-step guide to the development process in RubyMotion. This series was originally inspired by the [Rails Tutorial](http://ruby.railstutorial.org/), and I hope to follow in its footsteps by providing a great resource for anyone looking to develop and ship real, production-ready native iOS applications using RubyMotion. As I am still in the learning stages with RubyMotion and iOS development, this is a great series to follow and see how I build this podcast app from the ground up and explore new concepts along the way.
 
 
-![](/images/angular-banner@2x.jpg)
+[![](/images/angular-banner@2x.jpg)](/angular)
 {: .series-banner}
 
 > 

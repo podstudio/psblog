@@ -40,7 +40,7 @@ We want to create a new element-level directive that will take in all of the con
 Let's name it something like `apiEndpoint`:
 
 ~~~~ ruby
-  app.directive("apiEndpoint", function($http, $interpolate, $rootScope, ApiUrl) {
+  app.directive("apiEndpoint", function() {
     return {
       scope: {},
       link: function(scope, element, attrs) {
@@ -56,7 +56,7 @@ We can instantiate this in our UI by creating an element with the correct attrib
   <div api-endpoint></div>
 ~~~~
 
-This is the simplest implementation of an Angular directive. Now let's muddy it up. What kinds of things did we say we needed to display? Endpoint URL, a title, and the method. We can pass these attribtues into our directive's scope by adding the following to our markup:
+This is the simplest implementation of an Angular directive. Now let's muddy it up. What kinds of things did we say we needed to display? Endpoint URL, a title, and the method. We can pass these attributes into our directive's scope by adding the following to our markup:
 
 ~~~~ ruby
   <div api-endpoint method="GET" url="'/authors/{{author}}/posts'" title="List Posts"></div>
@@ -165,7 +165,7 @@ Now, we should be displaying our author field and its value will be propagated t
 
 Now that we have our input available in scope, we can use them to generate the request URL for our API Endpoint. We have two disparate components that we somehow need to combine to create a meaningful URL. The url attribute passed into the directive upon instantiation is a simple string `'/authors/{{author}}/posts'` and our scope has an attribute named `author` that we'd like to use in place of the `{{author}}` component of our URL.
 
-The way I do this is by utilizing Angular's very hadny [$interpolate Provider](http://docs.angularjs.org/api/ng/service/$interpolate).
+The way I do this is by utilizing Angular's very handy [$interpolate Provider](http://docs.angularjs.org/api/ng/service/$interpolate).
 
 > **$interpolate** Compiles a string with markup into an interpolation function. This service is used by the HTML $compile service for data binding. See $interpolateProvider for configuring the interpolation markup.
 
@@ -223,7 +223,7 @@ The last thing I'd like to touch on is adding the ability to test out our API ca
   </div>
 ~~~~
 
-This method is actually pretty easy. We just need to inject the `$http` provider into our directive and make the call, being to use the correct scope attribtues where needed:
+This method is actually pretty easy. We just need to inject the `$http` provider into our directive and make the call, being sure to use the correct scope attributes where needed:
 
 ~~~~ ruby
   scope.testCall = function() {

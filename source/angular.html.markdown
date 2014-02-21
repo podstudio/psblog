@@ -16,10 +16,10 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+- [Directives: Swagger-Jacking](/blog/angular-swagger-jacking)
 - Testing: Factories using rosie.js
 - Testing: Testing Directives + Their Templates
 - Testing: Inherited Controllers
 - Testing: $httpBackend.flush()
 - Services: Methods that return promises
 - Directives: Styled Checkbox
-- Directives: Swagger-Jacking
