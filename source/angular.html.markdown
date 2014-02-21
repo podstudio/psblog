@@ -17,7 +17,7 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 - [Directives: Swagger-Jacking](/blog/angular-swagger-jacking)
-- Testing: Factories using rosie.js
+- [Testing: Factories using rosie.js](/blog/angular-rosie)
 - Testing: Testing Directives + Their Templates
 - Testing: Inherited Controllers
 - Testing: $httpBackend.flush()
