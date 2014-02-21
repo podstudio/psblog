@@ -1,4 +1,4 @@
-I'm a Front End Engineer living in Boston, MA. Currently, I am the Lead Front End Engineer at [Backupify](http://wwww.backupify.com) where the vast majority of my day is spent between [Ruby on Rails](http://rubyonrails.org/) and [AngularJS](http://angularjs.org/). I am in the process of developing a Podcast Management App called **podstud.io**.
+I'm a Front End Engineer living in Boston, MA. Currently, I am the Lead Front End Engineer at [Backupify](http://wwww.backupify.com) where the vast majority of my day is spent between [Ruby on Rails](http://rubyonrails.org/) and [AngularJS](http://angularjs.org/). I am developing a Podcast Management App called **podstud.io**.
 
 I want this site to be a living account of my development efforts across a variety of disciplines, including [RubyMotion](http://www.rubymotion.com/), [AngularJS](http://angularjs.org) and the very cool [Ionic Framework](http://ionicframework.com/). My posts and articles will be divided up amongst a number of series, in the hopes of creating a much more thorough and digestable path to learning and mastering these frameworks.
 
