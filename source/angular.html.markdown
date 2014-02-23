@@ -18,7 +18,7 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 - [Directives: Swagger-Jacking](/blog/angular-swagger-jacking)
 - [Testing: Factories using rosie.js](/blog/angular-rosie)
-- Testing: Testing Directives + Their Templates
+- [Testing: Testing Directives + Their Templates](/blog/angular-testing-directives)
 - Testing: Inherited Controllers
 - Testing: $httpBackend.flush()
 - Services: Methods that return promises
