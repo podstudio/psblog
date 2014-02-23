@@ -107,7 +107,7 @@ So, to do this we want to create a new spec and start it off like so:
 
 ~~~~
 
-This is a good starting point that I use whenevr I want to begin testing a new directive of mine. Feel free to add or remove anything as you see fit. Let's take a look at this step by step.
+This is a good starting point that I use whenever I want to begin testing a new directive of mine. Feel free to add or remove anything as you see fit. Let's take a look at this step by step.
 
 ~~~~ ruby
   var element, $scope, httpBackend, compile, dScope;
@@ -120,7 +120,7 @@ This is a good starting point that I use whenevr I want to begin testing a new d
   }))
 ~~~~
 
-Here, I am just setting up variables that I am going to want to reference in various parts of our tests. Compile is going to be very important for when we want to inject our directive's scope into the template that we fetch during our spec. the $httpBackend service is important so that we can mock our external http resources.
+Here, I am just setting up variables that I am going to want to reference in various parts of our tests. Compile is going to be very important for when we want to inject our directive's scope into the template that we fetch during our spec. The $httpBackend service is important so that we can mock our external http resources.
 
 ~~~~ ruby
   template = __html__['/templates/author-form.html']
