@@ -205,7 +205,7 @@ This is a pretty good start to our tests. We assert that when we update the scop
 
 ### Form Validation
 
-Let's say we'd like to add some validation to our form. Before we save our new author, we want to make sure both the name and email fields are not blank, so we'll create a new `invalidFields` function and call it before calling `AuthorItem.save`
+Let's say we'd like to add some validation to our form. Before we save our new author, we want to make sure both the name and email fields are not blank, so we'll create a new `formValid` function and call it before calling `AuthorItem.save`
 
 ~~~~ ruby
   app.directive("authorForm", function(AuthorItem) {
