@@ -25,7 +25,8 @@ I have a vague idea of the direction I want this series (and the app itself) to 
 * Part 6: Integrating Reveal.app
 * [Part 7: Searching + iTunes Search API](/blog/building-podstudio-in-rubymotion-part-7)
 * [Part 8: Subscriptions + CDQ](/blog/building-podstudio-in-rubymotion-part-8)
-* Part 9: Now Playing View
-* Part 10: Subscriptions Collection View
-* Part 11: Podcast List View
-* Part 12: TBD
+* [Part 9: Now Playing Model](/blog/building-podstudio-in-rubymotion-part-9)
+* Part 10: Now Playing View
+* Part 11: Subscriptions Collection View
+* Part 12: Podcast List View
+* Part 13: TBD
