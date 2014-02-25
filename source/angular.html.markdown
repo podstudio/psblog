@@ -2,19 +2,9 @@
 ![](/images/angularjs-logo.png)
 {: .series-banner .no-border}
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+I spend the vast majority of my day in and out of the AngularJS source code and investigating ways to make my client-side apps even more fun to work with. My favorite thing to do as of late has been building out a sufficient test harness for all of my AngularJS projects, along with discovering new and interesting ways to build awesome apps while avoiding some of the jQuery ugliness of my past.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+In this series, I am going to steer away from the sequential nature of my [RubyMotion](/rubymotion) column, and instead use this as a sounding board for all of my thoughts relating to the world of AngularJS. You'll find **a lot** of talk about testing, and hopefully some interesting approaches to using Angular Services and Directives in surprising ways.
 
 - [Directives: Swagger-Jacking](/blog/angular-swagger-jacking)
 - [Testing: Factories using rosie.js](/blog/angular-rosie)
